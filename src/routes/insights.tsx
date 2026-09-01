@@ -64,7 +64,7 @@ function InsightsPage() {
 
   const insights: Insight[] = [];
 
-  const salesValue = Number(kpi?.total_sales_value ?? 0);
+  const salesValue = categoryRows.reduce((sum, row) => sum + Number(row.revenue), 0);
   const paidRevenue = Number(kpi?.total_revenue ?? 0);
   if (kpi && salesValue > 0) {
     const gap = salesValue - paidRevenue;
