@@ -39,7 +39,7 @@ function InsightsPage() {
   const products = useQuery(analyticsQueries.productRevenue());
   const customers = useQuery(analyticsQueries.topCustomers());
   const cities = useQuery(analyticsQueries.cityRevenue());
-  const payments = useQuery(analyticsQueries.paymentModes());
+  const payments = useQuery(analyticsQueries.paymentMethods());
   const lowStock = useQuery(analyticsQueries.lowStock());
   const neverOrdered = useQuery(analyticsQueries.neverOrdered());
   const status = useQuery(analyticsQueries.orderStatus());
