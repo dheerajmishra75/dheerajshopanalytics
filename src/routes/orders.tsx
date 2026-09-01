@@ -42,9 +42,9 @@ export const Route = createFileRoute("/orders")({
 });
 
 const STATUS_COLORS: Record<string, string> = {
-  Delivered: "var(--chart-5)",
-  Pending: "var(--chart-3)",
-  Cancelled: "var(--chart-4)",
+  Delivered: "var(--success)",
+  Pending: "var(--warning)",
+  Cancelled: "var(--destructive)",
 };
 
 const tooltipStyle = {
