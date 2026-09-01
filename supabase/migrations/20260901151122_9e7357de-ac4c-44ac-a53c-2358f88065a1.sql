@@ -1,0 +1,15 @@
+ALTER VIEW public.v_kpi_overview SET (security_invoker = on);
+ALTER VIEW public.v_product_revenue SET (security_invoker = on);
+ALTER VIEW public.v_top_customers SET (security_invoker = on);
+ALTER VIEW public.v_best_selling_products SET (security_invoker = on);
+ALTER VIEW public.v_order_status_breakdown SET (security_invoker = on);
+ALTER VIEW public.v_payment_methods SET (security_invoker = on);
+ALTER VIEW public.v_category_performance SET (security_invoker = on);
+ALTER VIEW public.v_city_revenue SET (security_invoker = on);
+ALTER VIEW public.v_low_stock_products SET (security_invoker = on);
+ALTER VIEW public.v_repeat_customers SET (security_invoker = on);
+ALTER VIEW public.v_never_ordered_products SET (security_invoker = on);
+ALTER VIEW public.v_category_contribution SET (security_invoker = on);
+ALTER VIEW public.v_top3_products_per_category SET (security_invoker = on);
+ALTER VIEW public.v_daily_revenue SET (security_invoker = on);
+ALTER VIEW public.v_orders_detail SET (security_invoker = on);
