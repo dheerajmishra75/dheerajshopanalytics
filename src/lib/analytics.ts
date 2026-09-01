@@ -194,5 +194,8 @@ export const inr = (value: number | null | undefined) =>
 export const num = (value: number | null | undefined) =>
   value === null || value === undefined ? "—" : new Intl.NumberFormat("en-IN").format(Number(value));
 
+export const pct = (value: number | null | undefined) =>
+  value === null || value === undefined ? "—" : `${Number(value).toFixed(1)}%`;
+
 export const shortDate = (iso: string) =>
   new Date(`${iso}T00:00:00`).toLocaleDateString("en-IN", { day: "2-digit", month: "short" });
