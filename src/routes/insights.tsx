@@ -67,12 +67,19 @@ function InsightsPage() {
   const salesValue = categoryRows.reduce((sum, row) => sum + Number(row.revenue), 0);
   const paidRevenue = Number(kpi?.total_revenue ?? 0);
   if (kpi && salesValue > 0) {
-    const gap = salesValue - paidRevenue;
+    const gap = Math.abs(paidRevenue - salesValue);
+    const paidHigher = paidRevenue > salesValue;
     insights.push({
-      title: "Paid revenue trails catalogue sales value",
-      body: `Delivered orders carry a sales value of ${inr(salesValue)} (quantity × price) but only ${inr(
+      title: paidHigher
+        ? "Collected payments exceed catalogue sales value"
+        : "Collected payments trail catalogue sales value",
+      body: `Delivered orders carry a sales value of ${inr(salesValue)} (quantity × price) while ${inr(
         paidRevenue,
-      )} was actually collected through payments — a gap of ${inr(gap)}. Reconcile pricing, discounts and payment capture before treating either figure as "revenue".`,
+      )} was actually collected through payments — a gap of ${inr(gap)}. ${
+        paidHigher
+          ? "Payment amounts include charges the line items do not (shipping, taxes or rounding), so never substitute one figure for the other."
+          : "Discounts or uncollected balances explain the shortfall; reconcile before treating either figure as final revenue."
+      }`,
       tone: gap > salesValue * 0.05 ? "warning" : "neutral",
     });
   }
