@@ -137,7 +137,7 @@ function InsightsPage() {
     insights.push({
       title: `${topPayment.payment_mode} is the preferred payment mode`,
       body: `It handled ${inr(topPayment.revenue)} across ${num(
-        topPayment.total_payments,
+        topPayment.transactions,
       )} delivered payments. Any downtime or fee change on this rail affects the majority of collections, so keep a tested fallback mode live.`,
       tone: "neutral",
     });
