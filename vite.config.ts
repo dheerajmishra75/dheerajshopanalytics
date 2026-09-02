@@ -12,4 +12,7 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Outside Lovable (which pins its own preset), pin the Vercel target explicitly when
+  // building on Vercel so the production output matches the host.
+  ...(process.env['VERCEL'] ? { nitro: { preset: "vercel" as const } } : {}),
 });

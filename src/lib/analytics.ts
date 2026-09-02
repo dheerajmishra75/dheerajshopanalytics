@@ -1,5 +1,5 @@
 import { queryOptions } from "@tanstack/react-query";
-import { supabase } from "@/integrations/supabase/client";
+import { analyticsSupabase as supabase } from "@/lib/supabase-analytics-client";
 
 /**
  * Data access layer for the DheerajShop analytics dashboard.
