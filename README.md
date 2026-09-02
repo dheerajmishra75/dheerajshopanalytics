@@ -5,6 +5,33 @@ original MySQL project (schema, seed data and 17 analysis queries) is the source
 truth; every metric shown in the UI is computed in SQL, never re-derived in
 JavaScript.
 
+> Interactive SQL-driven e-commerce analytics dashboard.
+
+### 🚀 Live Demo
+
+**[Open DheerajShop Analytics](https://dheerajshopanalytics.vercel.app/)**
+
+## 📸 Dashboard Preview
+
+### Dashboard
+
+![DheerajShop Dashboard](screenshots/Dashboard.png)
+
+### Products
+
+![DheerajShop Products](screenshots/Products.png)
+
+### Customers
+
+![DheerajShop Customers](screenshots/Customers.png)
+
+### Orders
+
+![DheerajShop Orders](screenshots/Orders.png)
+
+### Insights
+
+![DheerajShop Insights](screenshots/Insights.png)
 ## Stack
 
 | Layer | Technology |
